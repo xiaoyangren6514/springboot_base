@@ -1,0 +1,43 @@
+server:
+  port: 8080
+  servlet:
+    path: /hello
+    application-display-name: 旺财
+  tomcat:
+    max-connections: 20
+    min-spare-threads: 5
+
+# 普通值
+name: zhangsan
+name2: "lisi \n haha"
+name3: 'wangwu \n gaga'
+
+# 对象 Map
+friends:
+  userName: ${name}
+  age: 28
+
+friends2: {userName: zhaoliu,age: 29}
+
+# 数组(List Set)
+pets:
+ - cat
+ - dog
+ - pig
+
+pets2: [cat,dog,pig]
+
+# 配置文件注入
+user:
+  userName: 六子
+  age: 28
+  boss: false
+  birth: 2008/09/08
+  maps: {edu: 北京大学, isBiYe: true}
+  hobbies:
+    - 篮球
+    - 足球
+  dog:
+    name: 旺财
+    age: 6
+
